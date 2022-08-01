@@ -2,6 +2,8 @@ import React ,{useState,useEffect}from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import {Link, Route} from 'react-router-dom'
 import Table from 'react-bootstrap/esm/Table';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 import {
     retrieveUser,
@@ -42,7 +44,10 @@ export default function UserList(props){
 
 
 return(
-<Table striped bordered hover variant="dark">
+
+    <Card style={{ backgroundColor:"lightGrey",width:'30rem'}}>
+    <ListGroup variant="flush">
+<Table striped bordered hover variant="" bg color='grey' width={30}>
     <thead>
         <tr>
             <th>userLoginId</th>
@@ -82,6 +87,8 @@ return(
 
     </tbody>
 </Table>
+</ListGroup>
+</Card>
 
 
 

@@ -1,6 +1,7 @@
 import React , {useContext, useEffect, useState} from 'react'
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function EditUserForm(props){
      const [user,setUser] =useState(props.currentUser)
@@ -20,6 +21,9 @@ export default function EditUserForm(props){
    
 
      return (
+
+      <Card style={{ backgroundColor:"lightGrey",width:'30rem'}}>
+    <ListGroup variant="flush">
         <form onSubmit={submitHandler}>
 
          <Card style={{ width: '30rem' }}>
@@ -79,6 +83,8 @@ className="button muted-button">Cancel</button>
 </Card>
 
 </form>
+</ListGroup>
+</Card>
 
 
    );
